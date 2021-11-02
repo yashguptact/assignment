@@ -1,0 +1,12 @@
+
+<div class="card" *ngFor="let item of users | slice : start : end">
+<div class="card-inr" >
+    <img class="avatar" src="{{item.avatar}}" alt="">
+    <p class="name">{{item.first_name}} {{item.last_name}}</p>
+    <p clas="desc">{{item.id}}</p>
+</div>
+</div>
+
+<div class="loadmorediv" >
+    <button (click)="loadmore_click()" [disabled]="isDisabled">Load More</button>
+</div>

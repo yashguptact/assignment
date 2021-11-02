@@ -1,0 +1,45 @@
+<div>
+    <table border="2" width="200" style="float: left;margin-right:20px;">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Grade</th>
+    </tr>
+    <tr *ngFor="let emp of empArray">
+        <td>{{emp.sno }}</td>
+        <td>{{emp.ename }}</td>
+        <td>{{emp.grade }}</td>
+    </tr>
+</table>
+
+
+<table border="2" width="200" style="float: left;margin-right:20px;">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Grade</th>
+    </tr>
+    <tr *ngFor="let emp of empArray">
+        <td>{{emp.sno }}</td>
+        <td>{{emp.ename }}</td>
+        <td>{{emp.grade  | gradespipe }}</td>
+    </tr>
+</table>
+
+<table border="2" width="300" style="float: left;margin-right:20px;">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Grade</th>
+    </tr>
+    <tr *ngFor="let emp of empArray">
+        <td>{{emp.sno }}</td>
+        <td>{{emp.ename }}</td>
+        <td><img *ngFor="let item of emp.grade | starpipe" src="{{item}}" width="20"></td>
+    </tr>
+</table>
+</div>
+
+
+
+
